@@ -1,6 +1,6 @@
 # Quick Start
 
-TODO: Description
+Ecosystem Plugin for Rootstock support in Ape
 
 ## Dependencies
 
@@ -13,7 +13,15 @@ TODO: Description
 You can install the latest release via [`pip`](https://pypi.org/project/pip/):
 
 ```bash
-pip install <PYPI_NAME>
+ape plugins install rootstock
+```
+
+or via config file:
+
+```yaml
+# ape-config.yaml
+plugins:
+  - name: rootstock
 ```
 
 ### via `setuptools`
@@ -21,16 +29,21 @@ pip install <PYPI_NAME>
 You can clone the repository and use [`setuptools`](https://github.com/pypa/setuptools) for the most up-to-date version:
 
 ```bash
-git clone https://github.com/ApeWorX/<PYPI_NAME>.git
-cd <PYPI_NAME>
+git clone https://github.com/ApeWorX/ape-rootstock.git
+cd ape-rootstock
 python3 setup.py install
 ```
 
 ## Quick Usage
 
-TODO: Describe library overview in code
+Installing this plugin adds support for the Rootstock ecosystem:
+
+```bash
+ape console --network rootstock:mainnet
+```
 
 ## Development
 
-Please see the [contributing guide](CONTRIBUTING.md) to learn more how to contribute to this project.
+This project is in development and should be considered a beta.
+Things might not be in their final state and breaking changes may occur.
 Comments, questions, criticisms and pull requests are welcomed.
