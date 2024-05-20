@@ -29,7 +29,7 @@ plugins:
 You can clone the repository and use [`setuptools`](https://github.com/pypa/setuptools) for the most up-to-date version:
 
 ```bash
-git clone https://github.com/ApeWorX/ape-rootstock.git
+git clone https://github.com/jonathansmirnoff/ape-rootstock.git
 cd ape-rootstock
 python3 setup.py install
 ```
