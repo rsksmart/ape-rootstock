@@ -6,6 +6,7 @@ from ape_ethereum.ecosystem import (
     NetworkConfig,
     create_network_config,
 )
+from ape_ethereum.transactions import TransactionType
 
 NETWORKS = {
     # chain_id, network_id
@@ -14,9 +15,15 @@ NETWORKS = {
 }
 
 
+def _create_config() -> NetworkConfig:
+    return create_network_config(
+        block_time=30, required_confirmations=1, default_transaction_type=TransactionType.STATIC
+    )
+
+
 class RootstockConfig(BaseEthereumConfig):
-    mainnet: NetworkConfig = create_network_config(block_time=30, required_confirmations=1)
-    testnet: NetworkConfig = create_network_config(block_time=30, required_confirmations=1)
+    mainnet: NetworkConfig = _create_config()
+    testnet: NetworkConfig = _create_config()
 
 
 class Rootstock(Ethereum):
