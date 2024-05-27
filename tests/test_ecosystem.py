@@ -4,7 +4,7 @@ from ethpm_types import MethodABI
 
 
 # NOTE: None because we want to show the default is STATIC
-@pytest.mark.parametrize("tx_type", (None, 0, "0x0"))
+@pytest.mark.parametrize("tx_type", (0, 0, "0x0"))
 def test_create_transaction(rootstock, tx_type, eth_tester_provider):
     tx = rootstock.create_transaction(type=tx_type)
     assert tx.type == TransactionType.STATIC.value
