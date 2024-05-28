@@ -49,7 +49,5 @@ def test_networks(runner, cli, rootstock):
     rootstock.mainnet.set_default_provider("geth")
     rootstock.testnet.set_default_provider("geth")
 
-    print(rootstock.mainnet)
-
     result = runner.invoke(cli, ["networks", "list"])
     assert_rich_text(result.output, EXPECTED_OUTPUT)
