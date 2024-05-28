@@ -60,7 +60,10 @@ setup(
     author_email="support@rootstocklabs.com",
     url="https://github.com/rsksmart/ape-rootstock",
     include_package_data=True,
-    install_requires=[],
+    install_requires=[
+        "eth-ape>=0.7.23,<0.8.0",
+        "ethpm-types",  # Use same version as eth-ape
+    ],
     python_requires=">=3.8,<4",
     extras_require=extras_require,
     py_modules=["ape_rootstock"],
