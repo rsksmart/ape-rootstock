@@ -22,6 +22,9 @@ jobs:
         - name: Install Dependencies
           run: pip install commitizen
 
+        - name: Check commit history with cz
+          run: cz check --rev-range $(git rev-list --all --reverse | head -1)..HEAD
+
         - name: Check PR Title
           env:
               TITLE: ${{ github.event.pull_request.title }}
