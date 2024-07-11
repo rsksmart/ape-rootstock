@@ -21,5 +21,5 @@ jobs:
         - name: Install Dependencies
           run: pip install commitizen
 
-        - name: Check commit history
+        - name: Check commit history with cz
           run: cz check --rev-range $(git rev-list --all --reverse | head -1)..HEAD
