@@ -10,7 +10,7 @@ extras_require = {
         "hypothesis>=6.2.0,<7.0",  # Strategy-based fuzzer
     ],
     "lint": [
-        "black>=24.4.1,<25",  # Auto-formatter and linter
+        "black>=24.4.2,<25",  # Auto-formatter and linter
         "mypy>=1.10.0,<2",  # Static type analyzer
         "types-setuptools",  # Needed for mypy type shed
         "types-requests",  # Needed for mypy type shed
@@ -61,10 +61,9 @@ setup(
     url="https://github.com/rsksmart/ape-rootstock",
     include_package_data=True,
     install_requires=[
-        "eth-ape>=0.7.23,<0.8.0",
-        "ethpm-types",  # Use same version as eth-ape
+        "eth-ape>=0.8.1,<0.9",
     ],
-    python_requires=">=3.8,<4",
+    python_requires=">=3.9,<4",
     extras_require=extras_require,
     py_modules=["ape_rootstock"],
     license="Apache-2.0",
@@ -80,7 +79,6 @@ setup(
         "Operating System :: MacOS",
         "Operating System :: POSIX",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
